@@ -1,0 +1,26 @@
+# To update .NET dependencies:
+# 1) update this file
+# 2) set ROOT=<full path to pwd>
+# 3) dotnet new tool-manifest
+# 4) dotnet tool install Paket
+# 5) dotnet paket install
+# 6) bazel run @rules_dotnet//tools/paket2bazel:paket2bazel.exe -- --dependencies-file %ROOT%\deps\paket.dependencies  --output-folder %ROOT%\deps
+
+framework net6.0, netstandard2.0
+source https://api.nuget.org/v3/index.json
+
+nuget NETStandard.Library 2.0.3
+
+group net48
+    framework: net48
+    source https://api.nuget.org/v3/index.json
+
+    nuget Microsoft.NETFramework.ReferenceAssemblies.net48 1.0.3
+    #nuget WindowsBase_Core.STW 4.0.30319.1
+
+    nuget log4net 2.0.8
+    nuget Microsoft.Win32.Registry 5.0.0
+    nuget System.Drawing.Common 8.0.0
+    nuget Serilog 2.10.0
+    nuget Serilog.Settings.AppSettings 2.2.2
+    nuget Serilog.Sinks.File 4.1.0

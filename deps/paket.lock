@@ -1,0 +1,25 @@
+RESTRICTION: || (== net6.0) (== netstandard2.0)
+NUGET
+  remote: https://api.nuget.org/v3/index.json
+    Microsoft.NETCore.Platforms (7.0.4)
+    NETStandard.Library (2.0.3)
+      Microsoft.NETCore.Platforms (>= 1.1)
+
+GROUP net48
+RESTRICTION: == net48
+NUGET
+  remote: https://api.nuget.org/v3/index.json
+    log4net (2.0.8)
+    Microsoft.NETFramework.ReferenceAssemblies.net48 (1.0.3)
+    Microsoft.Win32.Registry (5.0)
+      System.Security.AccessControl (>= 5.0)
+      System.Security.Principal.Windows (>= 5.0)
+    Serilog (2.10)
+    Serilog.Settings.AppSettings (2.2.2)
+      Serilog (>= 2.6)
+    Serilog.Sinks.File (4.1)
+      Serilog (>= 2.5)
+    System.Drawing.Common (8.0)
+    System.Security.AccessControl (6.0)
+      System.Security.Principal.Windows (>= 5.0)
+    System.Security.Principal.Windows (5.0)

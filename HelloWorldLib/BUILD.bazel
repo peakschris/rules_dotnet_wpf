@@ -1,0 +1,21 @@
+load("@rules_dotnet//dotnet:defs.bzl", "csharp_library")
+
+csharp_library(
+    name = "HelloWorldLib",
+    srcs = glob([
+        "*.cs",
+    ]),
+    internals_visible_to = [],
+    visibility = ["//visibility:public"],
+    deps = [
+        "@paket.net48//microsoft.win32.registry",
+    ],
+    target_frameworks = ["net48"],
+    targeting_packs = [
+        "@paket.net48//microsoft.netframework.referenceassemblies.net48",
+        "@paket.main//netstandard.library",
+    ],
+    target_compatible_with = [
+        "@platforms//os:windows",
+    ],
+)

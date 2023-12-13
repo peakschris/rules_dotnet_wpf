@@ -1,0 +1,5 @@
+bazel-*
+.config
+MODULE.bazel.lock
+.vs
+obj
